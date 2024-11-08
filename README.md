@@ -1,8 +1,10 @@
 # starlink-portal
+Use this package to create an index.html file that you will be able to upload to Starlink.com.
 
+We recommend no online assets are referenced because this page is meant to function even if the router hosting it can't get online. All assets should be inlined.
+There should be a single `.js` file (set as entry in `webpack.config.js`) that imports `index.html` and either imports or contains all other javascript.
 
-It is important your output is only a single index.html that has no outside references. To verify this run the steps below and open your index.html file in a web browser. Open devtools, then the network panel and verify the only network request made is to index.html
-
+The example implementation demonstrates the redirection behavior as well as calling the local api for diagnostics information.
 ## Setup Steps
 1. Install node v22.7.0
 2. Run `npm install`
