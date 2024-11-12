@@ -34,9 +34,6 @@ module.exports = {
         test: /\.html$/i,
         use: [
           {
-            loader: path.resolve(__dirname, 'check-external-images-loader.js'),
-          },
-          {
             loader: 'html-loader',
             options: {
               sources: true, // Enable inlining of image sources
